@@ -22,17 +22,13 @@ export class AppComponent {
     if (this.itemArray[itemNumber] === 'empty') {
       this.itemArray[itemNumber] = this.isCross ? 'cross' : 'circle';
 
-
-      this.isCross= !this.isCross
-
-
-    }else{
-      return this.toastr.info('Already Filled')
+      this.isCross = !this.isCross;
+    } else {
+      return this.toastr.error('Already Filled');
     }
 
     this.checkIsWinner();
   };
-
 
   checkIsWinner = () => {
     //  checking  winner of the game
